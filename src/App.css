@@ -3,3 +3,20 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+
+html{
+	height: 100%;
+}
+
+body{
+	height: 100%;
+	color: #191919;
+	font-size: 14px;
+	font-weight: 400; 
+	line-height: 27px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	letter-spacing: 0.5px;
+	text-rendering: optimizeLegibility;
+	font-family: 'Raleway', sans-serif;
+}
