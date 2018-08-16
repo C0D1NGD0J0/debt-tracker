@@ -45,7 +45,7 @@ class Clients extends Component {
 									<tr key={client.id}>
 										<td>{client.firstName} {client.lastName}</td>
 										<td>{client.email}</td>
-										<td>{client.balance}</td>
+										<td>${parseFloat(client.balance).toFixed(2)}</td>
 										<td>{client.paymentDate}</td>
 										<td>
 											<Link to={`/client/${client.id}`} className="btn btn-default btn-sm">

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Sidebar = (props) =>{
 	const style = {
-		marginTop: "50vh", 
+		marginTop: "5vh", 
 		borderRadius: "0"
 	}
 
