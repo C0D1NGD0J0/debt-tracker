@@ -8,7 +8,7 @@ const Sidebar = (props) =>{
 	}
 
 	return(
-		<Link to="/client/add" className="btn btn-warning btn-block" style={style}>
+		<Link to="/client/new" className="btn btn-warning btn-block" style={style}>
 			<i className="fas fa-plus"></i> New Client
 		</Link>
 	)
