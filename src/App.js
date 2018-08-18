@@ -6,6 +6,7 @@ import Dashboard from "./components/layouts/Dashboard";
 import {Provider} from "react-redux";
 import store from "./store";
 import AddClient from "./components/clients/AddClient";
+import Login from "./components/auth/Login";
 import ClientDetails from "./components/clients/ClientDetails";
 import EditClientDetails from "./components/clients/EditClient";
 
@@ -19,6 +20,7 @@ class App extends Component {
 		      	<div className="container">
 		        	<Switch>
 		        		<Route exact path="/" component={Dashboard} />
+		        		<Route exact path="/login" component={Login} />
 		        		<Route exact path="/client/new" component={AddClient} />
 		        		<Route exact path="/client/:id" component={ClientDetails} />
 		        		<Route exact path="/client/edit/:id" component={EditClientDetails} />
