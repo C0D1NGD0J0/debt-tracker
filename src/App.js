@@ -9,6 +9,7 @@ import AddClient from "./components/clients/AddClient";
 import Login from "./components/auth/Login";
 import ClientDetails from "./components/clients/ClientDetails";
 import EditClientDetails from "./components/clients/EditClient";
+import { UserIsAuthenticated, UserIsNotAuthenticated } from "./helpers/auth";
 
 class App extends Component {
   render() {
@@ -19,11 +20,11 @@ class App extends Component {
 		      	<Navbar />
 		      	<div className="container">
 		        	<Switch>
-		        		<Route exact path="/" component={Dashboard} />
-		        		<Route exact path="/login" component={Login} />
-		        		<Route exact path="/client/new" component={AddClient} />
-		        		<Route exact path="/client/:id" component={ClientDetails} />
-		        		<Route exact path="/client/edit/:id" component={EditClientDetails} />
+		        		<Route exact path="/" component={ UserIsAuthenticated(Dashboard) } />
+		        		<Route exact path="/login" component={UserIsNotAuthenticated(Login)} />
+		        		<Route exact path="/client/new" component={UserIsAuthenticated(AddClient)} />
+		        		<Route exact path="/client/:id" component={UserIsAuthenticated(ClientDetails)} />
+		        		<Route exact path="/client/edit/:id" component={UserIsAuthenticated(EditClientDetails)} />
 		        	</Switch>
 		      	</div>
 		      </div>
